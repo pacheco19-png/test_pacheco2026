@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera página web</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .contenedor {
+            background: white;
+            color: #333;
+            max-width: 450px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #764ba2;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        button:hover {
+            background: #764ba2;
+        }
+
+        #contador {
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <h1>¡Mi primera página web!</h1>
+
+        <p>Bienvenido a mi proyecto de prueba en GitHub.</p>
+
+        <h2>Prueba de interacción</h2>
+
+        <p id="mensaje">Presiona el botón para comenzar.</p>
+
+        <button onclick="cambiarMensaje()">
+            Presióname
+        </button>
+
+        <h3>Contador de clics</h3>
+
+        <p id="contador">0</p>
+
+        <button onclick="aumentarContador()">
+            Sumar clic
+        </button>
+    </div>
+
+    <script>
+        let clics = 0;
+
+        function cambiarMensaje() {
+            document.getElementById("mensaje").innerHTML =
+                "¡Excelente! Tu página web funciona correctamente.";
+        }
+
+        function aumentarContador() {
+            clics++;
+
+            document.getElementById("contador").innerHTML = clics;
+        }
+    </script>
+
+</body>
+</html>
